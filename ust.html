@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.css">
+  <style>
+  body {
+    background: #f4f4f4;
+  }
+  .ui.fluid.container {
+    margin: 0 1vw !important;
+    width: 98vw;
+  }
+  .ui {
+    border-radius: 0 !important;
+  }
+  .seg1 .header, .seg1 h5, div, .ui.header, button.ui.button{
+    text-transform: uppercase;
+  }
+  .ui.selection.dropdown {
+    background: #d9d9d9;
+  }
+  ul, li {
+    margin: 0;
+    padding: 0
+  }
+  .ui.blocks li {
+    display: inline-block;
+  }
+  .ui.block {
+    height: 20px;
+    width: 20px;
+  }
+  .ui.block.gained {
+    background: #777;
+  }
+  .ui.block.lost {
+    background: #ccc;
+  }
+  .aligned.right {
+    float: right;
+  }
+  .aligned.left {
+    float: left;
+  }
+  .segment.nmtr {
+    padding: 0 !important
+  }
+  .seg4.grid .column {
+    background-clip:content-box;
+    background: rgb(244, 244, 239);
+    margin: 20px;
+  }
+
+  </style>
+</head>
+<body>
+  <div class="ui fluid container">
+    <div class="ui hidden divider"></div>
+    <div class="ui raised segment seg1">
+      <div class="ui equal width grid">
+        <div class="column">
+          <h3 class="ui header">Track Shipment Through</h3>
+          <h5>From</h5>
+          <div class="ui selection dropdown">
+            <input type="hidden" name="gender">
+            <i class="dropdown icon"></i>
+            <div class="default">Duangyan</div>
+          </div>
+        </div>
+        <div class="column">
+          <h3 class="ui header">&nbsp;</h3>
+          <h5>To</h5>
+          <div class="ui selection dropdown">
+            <input type="hidden" name="gender">
+            <i class="dropdown icon"></i>
+            <div class="default">Nashville</div>
+          </div>
+
+        </div>
+        <div class="column">
+          <h3 class="ui header">Shipper details</h3>
+          <h5>name of the shipper</h5>
+          <div class="ui selection dropdown">
+            <input type="hidden" name="gender">
+            <i class="dropdown icon"></i>
+            <div class="default">FreshFields</div>
+          </div>
+        </div>
+        <div class="column">
+          <h3 class="ui header">Retailer details</h3>
+          <h5>name</h5>
+          <div class="ui selection dropdown">
+            <input type="hidden" name="gender">
+            <i class="dropdown icon"></i>
+            <div class="default">Walmart</div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="ui raised segment seg2">
+      <div class="ui clearing basic segment nmtr">
+        <div class="left aligned">SUMMARY OF ROUTE DUANGYAN TO MIAMI</div>
+        <div class="right aligned">1 block = 200 FFE</div>
+      </div>
+
+      <div class="ui hidden divider"></div>
+
+      <div class="ui equal width grid seg4">
+        <div class="column">
+          <h2 class="ui tiny header">
+            <i class="train icon"></i>
+            <div class="content">
+              Rail
+            </div>
+          </h2>
+
+          <div class="party">
+            <strong>FW2M</strong>
+            <ul class="ui blocks">
+              <li class="ui block gained"></li>
+              <li class="ui block gained"></li>
+              <li class="ui block gained"></li>
+            </ul>
+          </div>
+
+          <div class="party">
+            <strong>FW3M</strong>
+            <ul class="ui blocks">
+              <li class="ui block gained"></li>
+              <li class="ui block gained"></li>
+              <li class="ui block lost"></li>
+            </ul>
+          </div>
+
+
+        </div>
+        <div class="column">
+
+          <h2 class="ui tiny header">
+            <i class="road icon"></i>
+            <div class="content">
+              Road
+            </div>
+          </h2>
+
+          <div class="party">
+            <strong>FW2M</strong>
+            <ul class="ui blocks">
+              <li class="ui block gained"></li>
+              <li class="ui block lost"></li>
+            </ul>
+          </div>
+        </div>
+        <div class="column"><h2 class="ui tiny header">
+          <i class="ship icon"></i>
+          <div class="content">
+            Sea
+          </div>
+        </h2>
+
+        <div class="party">
+          <strong>FW2M</strong>
+          <ul class="ui blocks">
+            <li class="ui block gained"></li>
+            <li class="ui block lost"></li>
+          </ul>
+        </div>
+      </div>
+      <div class="column">
+
+        <h2 class="ui tiny header">
+          <i class="industry icon"></i>
+          <div class="content">
+            Terminal
+          </div>
+        </h2>
+
+        <div class="party">
+          <strong>CTOM</strong>
+          <ul class="ui blocks">
+            <li class="ui block gained"></li>
+            <li class="ui block gained"></li>
+            <li class="ui block gained"></li>
+            <li class="ui block gained"></li>
+            <li class="ui block lost"></li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="ui raised segment seg5">
+    <h3 class="ui header">network overview</h3>
+
+    <div class="ui clearing basic segment nmtr">
+      <div class="ui grid">
+        <div class="three wide column">
+          <p>node data</p>
+          <div class="small ui buttons">
+            <button class="ui black button">Points</button>
+            <button class="ui button">FFE</button>
+          </div>
+        </div>
+
+        <div class="three wide column">
+          <p>type</p>
+          <div class="small ui buttons">
+            <button class="ui black button">inbound</button>
+            <button class="ui button">outbound</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="nodeview">
+
+    </div>
+
+
+
+
+  </div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js" charset="utf-8"></script>
+<script src="jquery.html-svg-connect.js" charset="utf-8"></script>
+<script type="text/javascript">
+   jQuery(document).ready(function($) {
+     $("#svgContainer").HTMLSVGconnect({
+       stroke: "#000",
+       strokeWidth: 8,
+       orientation: "auto",
+       class: "my-path",
+       paths: [
+         { start: "#red", end: "#aqua", strokeWidth: 12, offset: 20, class: "dashed-blue" },
+         { start: "#purple", end: "#green", stroke: "red" }
+       ]
+     });
+
+
+     var ports = []
+   });
+ </script>
+</body>
+</html>
