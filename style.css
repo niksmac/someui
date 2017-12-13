@@ -8,15 +8,20 @@ body {
 .ui {
   border-radius: 0 !important;
 }
-.seg1 .header, .seg1 h5, div, .ui.header, button.ui.button{
+.seg1 .header,
+.seg1 h5,
+div,
+.ui.header,
+button.ui.button {
   text-transform: uppercase;
 }
 .ui.selection.dropdown {
   background: #d9d9d9;
 }
-ul, li {
+ul,
+li {
   margin: 0;
-  padding: 0
+  padding: 0;
 }
 .ui.blocks li {
   display: inline-block;
@@ -38,66 +43,110 @@ ul, li {
   float: left;
 }
 .segment.nmtr {
-  padding: 0 !important
+  padding: 0 !important;
 }
 .seg4.grid .column {
-  background-clip:content-box;
+  background-clip: content-box;
   background: rgb(244, 244, 239);
   margin: 20px;
 }
 
-
 .nodeview .conatiner {
   width: 1200px;
   margin: 0 auto;
-  padding: 30px 0
+  padding: 30px 0;
 }
-
+.nodeview li:before {
+}
+span.dot {
+  content: '';
+  height: 15px;
+  width: 15px;
+  background: #fff;
+  border: 2px solid #333;
+  border-radius: 50%;
+  position: absolute;
+  left: 0;
+  top: -7px;
+}
 .nodeview .conatiner:after {
   content: '';
   clear: both;
   display: block;
 }
-
-.nodeview ul {
-  margin: 0;
-  padding: 0;
-  position: relative;
-  text-align: center;
-}
-
 .nodeview li {
   display: inline-block;
   width: calc(1200px/6);
-  border-top: 3px solid #ccc;
-  margin-bottom: 15px;
+  border-top: 3px dashed #ccc;
+  margin-bottom: 150px;
   float: left;
+  position: relative;
 }
-
 .rightol li {
   float: right;
 }
 .lefttor li:last-of-type {
   position: relative;
 }
-.lefttor li:last-of-type:after{
-  content: "";
-  background: #CCC;
+.lefttor li:last-of-type:after {
+  content: '';
+  border-right: 3px dashed #ccc;
   position: absolute;
-  width: 3px;
-  height: 35px;
+  height: 150px;
   display: block;
   right: 0;
   top: 0;
 }
 
-.rightol li:last-of-type:after{
-  content: "";
-  background: #CCC;
+.lefttor .rightol li:last-of-type:after {
+  content: '';
+  border-right: 0;
+  border-left: 3px dashed #ccc;
   position: absolute;
-  width: 3px;
-  height: 35px;
+  height: 1;
   display: block;
   left: 0;
   top: 0;
+}
+.contents div.ui.label {
+  display: table;
+}
+.contents {
+  position: absolute;
+  top: 15px;
+  left: -15px;
+  z-index: 1;
+}
+.label {
+  text-align: center;
+  padding: 0 2px;
+  display: block;
+  width: 30px;
+  border-radius: 3px;
+  text-transform: capitalize;
+  font-size: 10px;
+  width: auto;
+}
+.label.red {
+  background: red;
+  color: #fff;
+}
+.label.green {
+  background: green;
+  color: #fff;
+}
+li.reached {
+  border-top: 3px solid #ff9835;
+}
+li.reached:last-of-type:after {
+  border-right: 3px solid #ff9835;
+}
+.start.reached {
+  border-top: 3px dashed #ccc;
+}
+
+li .fa {
+  position: absolute;
+  left: 45%;
+  top: -30px;
 }
