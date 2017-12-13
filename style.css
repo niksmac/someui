@@ -154,3 +154,9 @@ li .fa {
   left: 45%;
   top: -30px;
 }
+li.final {
+  border: 0;
+}
+li.final:after {
+  border: 0 !important;
+}

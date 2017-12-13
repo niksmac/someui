@@ -10,6 +10,11 @@ $(document).ready(function() {
   for (var i = 6; i < lis.length; i += 12) {
     lis.slice(i, i + 6).wrapAll("<div class='rightol'></div>")
   }
+
+  $('.conatiner li')
+    .last()
+    .addClass('final')
+
   $('li.skipped').each(function(index, val) {
     $(this)
       .prev('.reached')
