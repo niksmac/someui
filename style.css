@@ -67,7 +67,7 @@ span.dot {
   border-radius: 50%;
   position: absolute;
   left: 0;
-  top: -7px;
+  top: -9px;
 }
 .nodeview .conatiner:after {
   content: '';
@@ -141,6 +141,9 @@ li.reached {
 }
 li.reached:last-of-type:after {
   border-right: 3px solid #ff9835;
+}
+.lefttor .rightol li.reached:last-of-type:after {
+  border-left: 3px solid #ff9835;
 }
 .start.reached {
   border-top: 3px dashed #ccc;
