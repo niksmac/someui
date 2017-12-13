@@ -6,56 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.css">
-  <style>
-  body {
-    background: #f4f4f4;
-  }
-  .ui.fluid.container {
-    margin: 0 1vw !important;
-    width: 98vw;
-  }
-  .ui {
-    border-radius: 0 !important;
-  }
-  .seg1 .header, .seg1 h5, div, .ui.header, button.ui.button{
-    text-transform: uppercase;
-  }
-  .ui.selection.dropdown {
-    background: #d9d9d9;
-  }
-  ul, li {
-    margin: 0;
-    padding: 0
-  }
-  .ui.blocks li {
-    display: inline-block;
-  }
-  .ui.block {
-    height: 20px;
-    width: 20px;
-  }
-  .ui.block.gained {
-    background: #777;
-  }
-  .ui.block.lost {
-    background: #ccc;
-  }
-  .aligned.right {
-    float: right;
-  }
-  .aligned.left {
-    float: left;
-  }
-  .segment.nmtr {
-    padding: 0 !important
-  }
-  .seg4.grid .column {
-    background-clip:content-box;
-    background: rgb(244, 244, 239);
-    margin: 20px;
-  }
-
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div class="ui fluid container">
@@ -221,7 +172,24 @@
     </div>
 
     <div class="nodeview">
-
+      <div class='conatiner'>
+        <ul>
+          <li>1</li>
+          <li>2</li>
+          <li>3</li>
+          <li>4</li>
+          <li>5</li>
+          <li>6</li>
+          <li>7</li>
+          <li>8</li>
+          <li>9</li>
+          <li>10</li>
+          <li>11</li>
+          <li>12</li>
+          <li>13</li>
+          <li>14</li>
+        </ul>
+      </div>
     </div>
 
 
@@ -230,23 +198,6 @@
   </div>
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js" charset="utf-8"></script>
-<script src="jquery.html-svg-connect.js" charset="utf-8"></script>
-<script type="text/javascript">
-   jQuery(document).ready(function($) {
-     $("#svgContainer").HTMLSVGconnect({
-       stroke: "#000",
-       strokeWidth: 8,
-       orientation: "auto",
-       class: "my-path",
-       paths: [
-         { start: "#red", end: "#aqua", strokeWidth: 12, offset: 20, class: "dashed-blue" },
-         { start: "#purple", end: "#green", stroke: "red" }
-       ]
-     });
-
-
-     var ports = []
-   });
- </script>
+<script src="script.js" charset="utf-8"></script>
 </body>
 </html>
