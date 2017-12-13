@@ -10,25 +10,40 @@ $(document).ready(function() {
   for (var i = 6; i < lis.length; i += 12) {
     lis.slice(i, i + 6).wrapAll("<div class='rightol'></div>")
   }
-
-  $('.skipped')
-    .prev('.reached')
-    .removeClass('reached')
-    .attr('id', 'start')
-
-  $('.skipped')
-    .next('.reached')
-    .attr('id', 'end')
+  $('li.skipped').each(function(index, val) {
+    $(this)
+      .prev('.reached')
+      .removeClass('reached')
+      .attr('id', 'start' + index)
+  })
+  $('li.skipped').each(function(index, val) {
+    $(this)
+      .next('.reached')
+      .attr('id', 'end' + index)
+  })
 })
-const connectVar = {
+const common = {
+  cssClass: 'myCssClass',
   paintStyle: { stroke: '#ff9835', strokeWidth: 3 },
-  source: 'start',
-  target: 'end',
-  anchor: ['Left', 'Left'],
+  anchor: ['Right', 'Left'],
+  connector: [
+    'Flowchart',
+    { stub: 80, cornerRadius: 5, alwaysRespectStubs: true }
+  ],
   endpoint: 'Blank',
-  overlays: ['Arrow'],
-  anchor: [0, 1, 0, 1]
+  overlays: ['PlainArrow'],
+  anchor: [0, 1, 0, 1],
+  detachable: false
+}
+const connectVar = {
+  source: 'start0',
+  target: 'end1'
+}
+const connectVar2 = {
+  source: 'start2',
+  target: 'end2'
 }
 jsPlumb.ready(function() {
-  jsPlumb.connect(connectVar)
+  jsPlumb.connect(connectVar, common)
+  jsPlumb.connect(connectVar2, common)
 })
